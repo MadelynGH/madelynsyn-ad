@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>AD Club - Certificate Maker!</title>
+
+        <link rel="stylesheet" type="text/css" href="/styles/header.css">
+        <link rel="stylesheet" type="text/css" href="/styles/certificate-maker.css">
+    </head>
+
+    <body>
+        <div id="certificate-container">
+            <div id="certificate-content">
+                <h1>This award is presented to</h1>
+                <div class="break"></div>
+
+                <input type="text" id="certificate-name">
+                <div class="break"></div>
+
+                <h1>for</h1>
+                <div class="break"></div>
+
+                <input type="text" id="certificate-job">
+                <div class="break"></div>
+
+                <div id="signature-and-logo">
+                    <input type="text" id="signature-text">
+                    <img src="/images/ad-club-logo-for-website.png" id="logo-certificate">
+                </div>
+            </div>
+        </div>
+
+        <button id="print-button">Print certificate</button>
+
+        <div id="print-modal"></div>
+
+        <script src="/scripts/header.js"></script>
+        <script src="/scripts/certificate-maker.js"></script>
+    </body>
+</html>

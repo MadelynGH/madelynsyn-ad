@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0px;
+}
+
+input {
+    border: none;
+    border-bottom: 4px solid rgb(14, 223, 133);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+
+    margin: 10px;
+
+    width: 85%;
+
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+#certificate-container {
+    margin: 30px;
+
+    width: 715px;
+    height: 550px;
+
+    border: 2px solid black;
+}
+
+#certificate-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#signature-text {
+    font-family: 'Allura', cursive;
+
+    font-size: 2.0em;
+
+    border-bottom: 1px solid black;
+
+    width: 50%;
+}
+
+#logo-certificate {
+    height: 50px;
+    margin-right: 3vw;
+
+    display: flex;
+}
+
+#signature-and-logo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin: 5%;
+    margin-top: 12%;
+}
