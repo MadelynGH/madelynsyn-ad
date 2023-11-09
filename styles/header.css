@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 #logo {
     height: 50px;
+    margin-right: 5vw;
 
     display: flex;
 }
@@ -15,7 +22,6 @@
     align-items: center;
     flex-basis: 100%;
 
-    margin-bottom: 60px;
     padding: 10px;
 
     border-bottom: 2px solid black;

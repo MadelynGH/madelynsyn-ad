@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: center;
+}
+
+.person-div {
+    border: 4px solid rgb(14, 223, 133);
+
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+table {
+    margin-right: 20vw;
+    margin-left: 20vw;
+    margin-top: 5vh;
+}
+
+th {
+    border: 6px solid rgb(14, 223, 133);
+
+    font-size: 15px;
+}
+
+td {
+    border: 6px solid rgb(14, 223, 133);
+
+    font-size: 15px;
+}
+
+#people {
+    display: flex;
+    flex-flow: column nowrap;
+
+    height: 84.2vh;
+
+    border-right: 6px solid rgb(14, 223, 133);
+}
+
+.section-header{
+    font-size: 50px;
+}
