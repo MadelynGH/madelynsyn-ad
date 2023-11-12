@@ -4,6 +4,7 @@ document.body.innerHTML = `<div id="header">
     <a href="/ad-dollars"><button>AD Dollars</button></a>
     <a href="/presidency"><button>Presidency</button></a>
     <a href="/certificate-maker"><button>Certificate Maker</button></a>
+    <a href="/chat"><button>AD Chat</button></a>
 </div>
 </div>
 

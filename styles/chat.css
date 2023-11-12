@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}

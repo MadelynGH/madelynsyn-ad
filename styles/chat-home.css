@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.other-person-message {
+    display: flex;
+    box-sizing: border-box;
+
+    background-color: #ccfffa;
+    color: black;
+
+    border-radius: 20px;
+    border-top-left-radius: 4px;
+
+    padding: 10px;
+}
+
+.this-person-message {
+    display: flex;
+    box-sizing: border-box;
+
+    background-color: #fdccff;
+    color: black;
+
+    border-radius: 20px;
+    border-top-right-radius: 4px;
+
+    padding: 10px;
+}
+
+#message-input {
+    max-height: 300px;
+    resize: none;
+
+    padding: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    outline: none;
+    background-color: rgb(14, 223, 133);
+
+    border: none;
+}
+
+#message-input:focus {
+    background-color: rgb(14, 223, 133);
+}
+
+#send-message-div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#message-div {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#this-message-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    width: 230px;
+}
+
+#other-message-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 230px;
+}
