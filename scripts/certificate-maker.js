@@ -18,6 +18,10 @@ const printCertificate = function() {
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+                * {
+                    transform: scale(1.1);
+                }
                 
                 body {
                     display: flex;
@@ -30,6 +34,10 @@ const printCertificate = function() {
                     font-family: 'Montserrat', sans-serif;
                 }
                 
+                h1 {
+                    text-align: center;
+                }
+
                 .break {
                     flex-basis: 100%;
                     height: 0px;
@@ -48,6 +56,8 @@ const printCertificate = function() {
                     width: 85%;
                 
                     text-align: center;
+
+                    box-sizing: border-box;
                 }
                 
                 input:focus {
@@ -58,7 +68,7 @@ const printCertificate = function() {
                     margin: 0px;
                     padding: 0px;
 
-                    scale: 105%;
+                    transform: scale(1.05);
                 
                     width: 715px;
                     height: 550px;
@@ -68,16 +78,24 @@ const printCertificate = function() {
                     display: flex;
                     flex-flow: row wrap;
                     justify-content: center;
+
+                    width: 100%;
+                    box-sizing: border-box;
+
+                    margin-top: 130px;
                 }
                 
                 #signature-text {
                     font-family: 'Allura', cursive;
+                    font-weight: normal;
                 
                     font-size: 2.0em;
                 
                     border-bottom: 1px solid black;
                 
                     width: 50%;
+
+                    box-sizing: border-box;
                 }
                 
                 #logo-certificate {
@@ -85,6 +103,8 @@ const printCertificate = function() {
                     margin-right: 3vw;
                 
                     display: flex;
+
+                    box-sizing: border-box;
                 }
                 
                 #signature-and-logo {
@@ -96,6 +116,8 @@ const printCertificate = function() {
                 
                     margin: 5%;
                     margin-top: 12%;
+
+                    box-sizing: border-box;
                 }
             </style>
             
