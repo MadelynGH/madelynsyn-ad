@@ -12,6 +12,10 @@
     </head>
 
     <body>
+        <div id="switch-user-div">
+            <button id="switch-user">Switch User</button>
+        </div>
+
         <div id="message-div">
             <div id="other-message-div"></div>
             <div id="this-message-div"></div>
@@ -20,7 +24,7 @@
         <div class="break"></div>
 
         <div id="send-message-div">
-            <textarea rows="1" id="message-input" placeholder="Send a message!" oninput="document.getElementById('message-input').rows = document.getElementById('message-input').value.split('\n').length;"></textarea>
+            <textarea maxlength="500" rows="1" id="message-input" placeholder="Send a message!" oninput="document.getElementById('message-input').rows = document.getElementById('message-input').value.split('\n').length;"></textarea>
             <button id="send-message-button">Send</button>
         </div>
 
