@@ -74,7 +74,7 @@ body {
 
     height: 58vh;
     overflow-y: auto;
-    max-width: 90vw;
+    width: 60vw;
 
     border: 1px solid rgb(138, 223, 186);
     padding: 10px;
@@ -89,7 +89,6 @@ body {
     overflow: hidden;
 
     min-width: 18vw;
-    width: fit-content;
 }
 
 #other-message-div {
@@ -101,7 +100,6 @@ body {
     overflow: hidden;
 
     min-width: 18vw;
-    width: fit-content;
 }
 
 #switch-user-div {
