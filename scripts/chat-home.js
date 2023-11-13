@@ -14,6 +14,7 @@ if (!(document.cookie.indexOf("user=andrew") == -1)) {
 
 document.addEventListener("DOMContentLoaded", function() {
     const messageDiv = document.getElementById("message-div");
+    const userHeader = document.getElementById("user-header");
 
     const sendMessageButton = document.getElementById("send-message-button");
     const switchUserButton = document.getElementById("switch-user");
@@ -91,4 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.cookie = "user=; expires=Wed, 02 Jan 1970 00:00:00 UTC; path=/;";
         location.reload();
     });
+
+    userHeader.innerText = user.charAt(0).toUpperCase() + user.slice(1);
 });
