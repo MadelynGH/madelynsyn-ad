@@ -24,7 +24,7 @@ body {
 
     padding: 10px;
 
-    border-bottom: 2px solid black;
+    box-shadow: 0px 5px 5px -4px darkgray;
 
     position: relative;
 }
