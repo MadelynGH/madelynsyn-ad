@@ -13,6 +13,8 @@ if (!(document.cookie.indexOf("user=andrew") == -1)) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    const messageDiv = document.getElementById("message-div");
+
     const sendMessageButton = document.getElementById("send-message-button");
     
     let otherPersonMessages = new Array();
@@ -38,6 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 otherMessageDiv.innerHTML =  otherMessageDiv.innerHTML + `<p class="other-person-message">` + array[i] + `</p> <div class="break"></div>`;
             }
         }
+
+        messageDiv.scrollTop = messageDiv.scrollHeight;
     }
     
     if (user) {
@@ -83,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 })
                 .then(() => {
                     console.log("Your message has been sent!");
+                    document.getElementById("message-input").value = "";
                 })
                 .catch((error) => {
                     console.error("Error writing document: ", error);
