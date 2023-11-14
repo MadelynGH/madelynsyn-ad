@@ -144,3 +144,13 @@ body {
 #user-header {
     margin-left: 15px;
 }
+
+.message-group {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#typing-div {
+    margin: 0px;
+    margin-top: 5px;
+}

@@ -18,10 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const sendMessageButton = document.getElementById("send-message-button");
     const switchUserButton = document.getElementById("switch-user");
-    
-    let otherPersonMessages = new Array();
-    let thisPersonMessages = new Array();
+    const messageInputElement = document.getElementById("message-input");
+    const typingDiv = document.getElementById("typing-div");
+
     let everyoneMessages = new Array();
+
+    let id;
     
     const iterateThrough = function(array) {
         const thisMessageDiv = document.getElementById("this-message-div");
@@ -32,15 +34,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         for (let i = 0; i < array.length; i++) {
             if (array[i].name == user) {
-                thisMessageDiv.innerHTML = thisMessageDiv.innerHTML + `<p class="this-person-message" id="` + i + `-message">` + array[i].message + `</p> <p class="user-picture">` + array[i].name.toUpperCase().charAt(0) + `<div class="break"></div>`;
+                thisMessageDiv.innerHTML = thisMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="this-person-message">` + array[i].message + `</p> <p class="user-picture">` + array[i].name.toUpperCase().charAt(0) + `</div><div class="break"></div>`;
                 otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<div style="height: ` + document.getElementById(i + "-message").offsetHeight + `px; width: 100%;"></div>`;
             }
 
             if (array[i].name !== user) {
                 if (array[i].name.toUpperCase().charAt(0) == "A") {
-                    otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<p class="user-picture">` + "A" + `</p> <p class="other-person-message" id="` + i + `-message">` + array[i].message + `</p> <div class="break"></div>`;
+                    otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="user-picture">A</p> <p class="other-person-message">` + array[i].message + `</p></div><div class="break"></div>`;
                 } else if (array[i].name.toUpperCase().charAt(0) == "D") {
-                    otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<p class="user-picture">` + "D" + `</p> <p class="other-person-message" id="` + i + `-message">` + array[i].message + `</p> <div class="break"></div>`;
+                    otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="user-picture">D</p> <p class="other-person-message">` + array[i].message + `</p></div><div class="break"></div>`;
                 }
                 thisMessageDiv.innerHTML = thisMessageDiv.innerHTML + `<div style="height: ` + document.getElementById(i + "-message").offsetHeight + `px; width: 100%;"></div>`;
             }
@@ -53,8 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
         db.collection("messages")
         .orderBy("timestamp")
         .onSnapshot((querySnapshot) => {
-            otherPersonMessages = [];
-            thisPersonMessages = [];
             everyoneMessages = [];
 
             querySnapshot.forEach((doc) => {
@@ -62,6 +62,27 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             iterateThrough(everyoneMessages);
         });
+    }
+
+    const checkTypingStatus = function() {
+        db.collection("typing")
+        .onSnapshot((querySnapshot) => {    
+            querySnapshot.forEach((doc) => {
+                if (doc.data().name == "andrew") {
+                    if (doc.data().typing && user !== "andrew") {
+                        typingDiv.innerText = "Andrew is typing...";
+                    }
+                } else if (doc.data().name == "daniel") {
+                    if (doc.data().typing && user !== "daniel") {
+                        console.log("Daniel is typing...");
+                        typingDiv.innerText = "Daniel is typing...";
+                    } else {
+                        typingDiv.innerText = "";
+                    }
+                }
+            });
+        });
+
     }
     
     sendMessageButton.addEventListener("click", function() {
@@ -94,4 +115,42 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     userHeader.innerText = user.charAt(0).toUpperCase() + user.slice(1);
+
+    if (user == "andrew") {
+        id = "wAjf5deM8N6Ydex0BwXK";
+    } else if (user == "daniel") {
+        id = "EoDFykf22YvWXbXKfP3N";
+    }
+
+    messageInputElement.addEventListener("focus", function() {
+        console.log("You just started typing.");
+
+        db.collection("typing").doc(id).set({
+            name: user,
+            typing: true
+        })
+        .then(() => {
+            
+        })
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
+    });
+
+    messageInputElement.addEventListener("blur", function() {
+        console.log("You just stopped typing.");
+
+        db.collection("typing").doc(id).set({
+            name: user,
+            typing: false
+        })
+        .then(() => {
+            
+        })
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
+    });
+
+    setInterval(checkTypingStatus(), 100);
 });
