@@ -8,6 +8,4 @@ document.body.innerHTML = `<div id="header">
 </div>
 </div>
 
-<div class="break"></div>
-
-<script src="scripts/header.js"></script>` + document.body.innerHTML;
+<div class="break"></div><div id="content">` + document.body.innerHTML + "</div>";
