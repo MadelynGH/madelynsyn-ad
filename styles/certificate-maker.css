@@ -10,6 +10,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+#content { /* (This was created by the header JS file.) */
+    align-items: center;
+}
+
 .break {
     flex-basis: 100%;
     height: 0px;
@@ -51,6 +55,7 @@ input:focus {
 
 #signature-text {
     font-family: 'Allura', cursive;
+    font-weight: normal;
 
     font-size: 2.0em;
 
