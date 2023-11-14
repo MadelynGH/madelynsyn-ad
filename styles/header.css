@@ -36,7 +36,13 @@ body {
 }
 
 #content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
     margin-top: 100px;
+
+    width: 100vw;
 }
 
 .break {

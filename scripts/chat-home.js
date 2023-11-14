@@ -34,15 +34,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         for (let i = 0; i < array.length; i++) {
             if (array[i].name == user) {
-                thisMessageDiv.innerHTML = thisMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="this-person-message">` + array[i].message + `</p> <p class="user-picture">` + array[i].name.toUpperCase().charAt(0) + `</div><div class="break"></div>`;
+                thisMessageDiv.innerHTML = thisMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="this-person-message">` + array[i].message + `</p> <p class="user-picture-this user-picture">` + array[i].name.toUpperCase().charAt(0) + `</div><div class="break"></div>`;
                 otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<div style="height: ` + document.getElementById(i + "-message").offsetHeight + `px; width: 100%;"></div>`;
             }
 
             if (array[i].name !== user) {
                 if (array[i].name.toUpperCase().charAt(0) == "A") {
-                    otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="user-picture">A</p> <p class="other-person-message">` + array[i].message + `</p></div><div class="break"></div>`;
+                    otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="user-picture-other user-picture">A</p> <p class="other-person-message">` + array[i].message + `</p></div><div class="break"></div>`;
                 } else if (array[i].name.toUpperCase().charAt(0) == "D") {
-                    otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="user-picture">D</p> <p class="other-person-message">` + array[i].message + `</p></div><div class="break"></div>`;
+                    otherMessageDiv.innerHTML = otherMessageDiv.innerHTML + `<div class="message-group" id="` + i + `-message"><p class="user-picture-other user-picture">D</p> <p class="other-person-message">` + array[i].message + `</p></div><div class="break"></div>`;
                 }
                 thisMessageDiv.innerHTML = thisMessageDiv.innerHTML + `<div style="height: ` + document.getElementById(i + "-message").offsetHeight + `px; width: 100%;"></div>`;
             }
