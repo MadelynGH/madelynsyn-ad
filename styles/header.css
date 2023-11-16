@@ -71,3 +71,16 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+#feedback-button {
+    background-color: rgb(14, 185, 223);
+    border: 2px solid rgb(14, 185, 223);
+
+    position: fixed;
+    right: 0;
+}
+
+#feedback-button:hover {
+    color: rgb(14, 185, 223);
+    background-color: white;
+}

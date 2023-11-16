@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>AD Club - Feedback!</title>
+        
+        <link rel="stylesheet" type="text/css" href="/styles/feedback.css">
+        <link rel="stylesheet" type="text/css" href="/styles/header.css">
+    </head>
+
+    <body>
+        <h1>We Love Your Feedback!</h1>
+
+        <div class="break"></div>
+
+        <div id="feedback-form">
+            <div class="input-div">
+                <label for="name-input" class="label">Name</label>
+                <input type="text" id="name-input" class="input" autocomplete="off">
+            </div>
+
+            <div class="break"></div>
+
+            <div class="input-div">
+                <label for="subject-input" class="label">Subject</label>
+                <input type="text" id="subject-input" class="input" autocomplete="off">
+            </div>
+
+            <div class="break"></div>
+
+            <div class="input-div">
+                <label for="feedback-input" class="label">Feedback</label>
+                <textarea id="feedback-input" maxlength="1000" rows="4"></textarea>
+            </div>
+
+            <div class="break"></div>
+
+            <button id="submit-button">Submit</button>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+        <script src="/scripts/feedback.js" type="module"></script>
+        <script src="/scripts/header.js"></script>
+    </body>
+</html>
