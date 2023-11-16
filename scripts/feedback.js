@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (nameInputValue !== "" && subjectInputValue !== "" && feedbackInputValue !== "") {
             db.collection("feedback").doc().set({
-                name: nameInputValue.toLowerCase(),
-                subject: subjectInputValue.toLowerCase(),
-                feedback: feedbackInputValue.toLowerCase()
+                name: nameInputValue,
+                subject: subjectInputValue,
+                feedback: feedbackInputValue
             })
             .then(() => {
                 nameInputValue = "";
