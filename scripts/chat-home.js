@@ -8,9 +8,9 @@ if (!(document.cookie.indexOf("user=andrew") == -1)) {
 } else if (!(document.cookie.indexOf("user=daniel") == -1)) {
     console.log("The user is Daniel.");
     user = "daniel";
-}/* else if (document.cookie == "") {
+} else if (document.cookie == "") {
     location.replace("/chat");
-}*/
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     const messageDiv = document.getElementById("message-div");

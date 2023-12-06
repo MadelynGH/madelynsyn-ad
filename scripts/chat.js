@@ -1,5 +1,5 @@
 if (!(document.cookie === "")) {
-    location.replace("/dashboard");
+    location.replace("home");
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     andrewButton.addEventListener("click", function() {
         document.cookie = "user=andrew; path=/;";
-        location.replace("/dashboard");
+        location.replace("home");
     });
 
     danielButton.addEventListener("click", function() {
         document.cookie = "user=daniel; path=/;";
-        location.replace("/dashboard");
+        location.replace("home");
     });
 })

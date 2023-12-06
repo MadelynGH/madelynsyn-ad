@@ -72,22 +72,15 @@ a {
     color: inherit;
 }
 
-#blue-button-div {
-    display: flex;
-    align-items: center;
-    height: 95px;
+#feedback-button {
+    background-color: rgb(14, 185, 223);
+    border: 2px solid rgb(14, 185, 223);
 
     position: fixed;
     right: 0;
-    top: 0;
 }
 
-.blue-button {
-    background-color: rgb(14, 185, 223);
-    border: 2px solid rgb(14, 185, 223);
-}
-
-.blue-button:hover {
+#feedback-button:hover {
     color: rgb(14, 185, 223);
     background-color: white;
 }
