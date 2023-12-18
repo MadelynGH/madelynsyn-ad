@@ -41,6 +41,16 @@ body {
     max-width: 25vh;
 }
 
+.this-person-message, .other-person-message {
+    /*These are the default p styles: */
+    
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 #message-input {
     max-height: 40vh;
     resize: none;
