@@ -81,6 +81,8 @@ button {
 
     padding: 10px;
     margin: 20px;
+
+    transition: all 0.4s;
 }
 
 button:hover {
