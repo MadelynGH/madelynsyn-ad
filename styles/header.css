@@ -5,7 +5,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(14, 223, 133);
+    background: rgb(13, 198, 176);
     border-radius: 12px;
 }
 
@@ -15,11 +15,11 @@
 
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(13, 181, 109);
+    background: rgb(13, 181, 156);
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: rgb(12, 148, 90);
+    background: rgb(12, 148, 148);
 }
 
 body {
