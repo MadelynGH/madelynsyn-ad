@@ -5,21 +5,25 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(13, 198, 176);
+    /* background: rgb(13, 198, 176); */
+    background: linear-gradient(to right, rgb(13, 198, 176), rgb(13, 226, 201));
     border-radius: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(251, 179, 255);
+    /* background: rgb(251, 179, 255); */
+    background: linear-gradient(to right, rgb(251, 179, 255), rgb(235, 160, 237));
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(13, 181, 156);
+    /* background: rgb(13, 181, 156); */
+    background: linear-gradient(to right, rgb(13, 181, 156), rgb(14, 215, 192));
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: rgb(12, 148, 148);
+    /* background: rgb(12, 148, 148); */
+    background: linear-gradient(to right, rgb(12, 148, 148), rgb(14, 195, 167));
 }
 
 body {
