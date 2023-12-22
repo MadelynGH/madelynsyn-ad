@@ -13,6 +13,15 @@
     background: rgb(251, 179, 255);
 }
 
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(13, 181, 109);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(12, 148, 90);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
