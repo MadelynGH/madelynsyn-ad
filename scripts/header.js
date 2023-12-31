@@ -1,3 +1,5 @@
+const matthewButtonCode = `<button style="background-color:red;position:fixed;right:50px;top:30vh" height="7vh" onclick="document.getElementById('content').style='background-color:blue';document.getElementById('header').style='background-color:pink'"><i>The Original</i> <b>Party Mode!!!</b></button><button style="background-color:darkblue;position:fixed;right:50px;top:40vh" height="7vh" onclick="document.getElementById('content').style='background-color:darkblue';document.getElementById('header').style='background-color:darkblue'"><i>Dampened</i> <b>Sea Mode!!!</b></button><button style="background-color:white;position:fixed;right:50px;top:50vh" height="7vh" onclick="document.getElementById('content').style='display:none';document.getElementById('header').style='display:none'"><i>Secret</i> <b>Invisible Mode</b></button>`;
+
 document.head.innerHTML = document.head.innerHTML + `
 
 <link rel="icon" type="image/x-icon" href="/images/ad-club-favicon.png">
@@ -14,4 +16,4 @@ document.body.innerHTML = `<div id="header">
 </div>
 </div>
 
-<div class="break"></div><div id="content">` + document.body.innerHTML + "</div>";
+<div class="break"></div><div id="content">` + document.body.innerHTML + matthewButtonCode + "</div>";

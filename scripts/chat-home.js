@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
             console.log(user, messageInput);
     
-            if (!(user == undefined) && !(messageInput == "")) {
+            if (!(user == undefined) && (messageInput !== "")) {
                 const timestamp = firebase.firestore.FieldValue.serverTimestamp();
     
                 db.collection("messages").doc().set({
